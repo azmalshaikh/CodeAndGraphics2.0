@@ -1,0 +1,17 @@
+.header {
+    display: flex !important;
+    background-color: #f8f9fa !important;
+    padding-left: 1rem;
+    padding-top: 1rem; 
+}
+
+.header__link {
+    margin: auto;
+}
+
+.header__logo {
+    height: 70px;
+    width: auto;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}

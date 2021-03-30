@@ -1,0 +1,21 @@
+.slideshow {
+    margin-bottom: 75px;
+}
+
+.slideshow__images {
+    height: 500px;
+    width: 1400px;
+    opacity: 0.8;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slideshow__design {
+    color: rgb(5, 155, 191);
+}
+
+@media (max-width: 425px) {
+    .erase {
+        display: none;
+    }
+}

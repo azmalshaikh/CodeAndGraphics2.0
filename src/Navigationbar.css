@@ -1,0 +1,35 @@
+.navigationBar {
+    height: 100%;
+    top:0;
+}
+
+.navbar {
+    background-color: rgb(5, 155, 191) !important;
+}
+
+@media (min-width: 992px) {
+    .webname {
+        display: none !important;
+    }
+}
+
+.nav__item {
+    color: white !important;
+    margin-right: 1rem;
+}
+
+.nav__items :hover {
+    color: rgb(197, 196, 196) !important;
+}
+
+.nav__dropdown {
+    color: white;
+}
+
+.nav__dropdown :hover {
+    color: rgb(197, 196, 196) !important;
+}
+
+.dropdown__heading {
+    cursor: auto;
+}

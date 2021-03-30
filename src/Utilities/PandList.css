@@ -1,0 +1,7 @@
+.pandlist__heading {
+    font-size: 1.8rem;
+}
+
+.pandlist__contents, .pandlist__items{
+    font-size: 1.3rem;
+}

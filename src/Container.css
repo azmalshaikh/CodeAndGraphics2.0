@@ -1,0 +1,47 @@
+.card {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px !important;
+}
+
+.card__image {
+    width: auto;
+    height: 225px;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 426px) and (max-width: 900px) {
+    .card__imageTablet {
+        width: auto;
+        height: 150px;
+    }
+
+    .carddetails__tablet {
+        /* display: none; */
+        font-size: 0.8rem;
+    }
+
+    .carddetails__headingTablet {
+        font-size: 1.5rem ;
+    }
+}
+
+.carddetails__heading {
+    color: rgb(5, 155, 191);
+}
+
+.card__button :hover{
+    background-color: rgb(5, 155, 191);
+    text-decoration: none;
+    color: white;
+}
+
+.card__buttonlink {
+    border: 1px solid rgb(5, 155, 191);
+    background-color: white;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}

@@ -1,0 +1,19 @@
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+.table__heading {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0, 0.05);
+}

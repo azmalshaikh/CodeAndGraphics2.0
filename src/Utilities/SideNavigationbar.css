@@ -1,0 +1,103 @@
+.sidenavigation {
+    top: 4rem;
+    bottom: 40rem;
+    z-index: 1000;
+    height: calc(100vh - 4rem);
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    background-color: #f8f9fa;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .sidenavigation {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: block !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidenavigation {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidenavigation {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidenavigation {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+
+.navigationbar {
+    max-height: calc(110vh - 9rem);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    color: rgb(5, 155, 191);
+    padding-top: 1rem !important;
+}
+
+.navigationbar__list {
+    color: rgb(5, 155, 191) !important;
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-direction: column !important;
+    margin-top: 0;
+}
+
+.listitems {
+    margin: -0.25rem !important;
+}
+ 
+.listitems__heading {
+     font-weight: 500;
+     margin-bottom: 0.5rem;
+     line-height: 1.2;
+}
+
+.listitemspadding {
+    padding-bottom: 3.5rem;
+}
+
+.listitems :hover {
+    text-decoration: none;
+    color: #343a40;
+}
+
+.listitems__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidenavigation:not(.show) {
+    display: none;
+}
+
+.activenumber {
+    background-color: rgb(5, 155, 191);
+    color: white;
+    border-radius: 0.3rem;
+}
