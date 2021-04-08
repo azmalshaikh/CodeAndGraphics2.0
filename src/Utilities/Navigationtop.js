@@ -20,6 +20,7 @@ function Navigationtop({text , number, numbertwo}) {
         {"link": "/javaintro", "title": "Java"},
         {"link": "/cppintro", "title": "C++"},
         {"link": "/pythonintro", "title": "Python"},
+        {"link": "/androiddevintro", "title": "Android"}
     ]
     
     let i = 0, j = 0;
@@ -32,14 +33,14 @@ function Navigationtop({text , number, numbertwo}) {
                 <Nav className="mr-auto navtop__items">
                     {topnavdata.map((heading) => {
                         i++;
-                        return <Link to={heading.link} className={ i == number ? "navtop__item active" : "navtop__item"} onClick={() => setExpanded(false)}>{heading.title}</Link>
+                        return <Link to={heading.link} className={ i === number ? "navtop__item active" : "navtop__item"} onClick={() => setExpanded(false)}>{heading.title}</Link>
                     })}
                 </Nav>
 
                 <Nav className="mr-auto navtop__itemstwo">
                     {text && text.map((text) => {
                         j++;
-                        return <Link to={text.link} className={ j == numbertwo ? "navtop__item active" : "navtop__item"} onClick={() => setExpanded(false)}>{text.title}</Link>
+                        return <Link to={text.link} className={ j === numbertwo ? "navtop__item active" : "navtop__item"} onClick={() => setExpanded(false)}>{text.title}</Link>
                     })}
                 </Nav>
             </Navbar.Collapse>

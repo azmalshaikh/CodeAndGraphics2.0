@@ -8,34 +8,7 @@ import SideNavigationbar from '../Utilities/SideNavigationbar';
 import TableContents from '../Utilities/TableContents';
 import "./Common.css";
 
-function Htmlintro() {
-
-    // const data = ['HTML Introduction', 'Installing Editor', 'HTML Structure', 'HTML Elements', 'HTML Heading & Paragaraphs','HTML Text Formatting',
-    //                 'HTML Attributes', 'HTML Img & Anchor tags', 'HTML List &amp; Tables', 'HTML Forms', 'HTML Inline & Block', 'HTML Ids & Classes',
-    //                 'HTML Entities', 'HTML Semantic Tags', 'HTML Colors', 'HTML Layout', 'HTML Head', 'HTML Figure & Figcaption', 'HTML Responsive'
-    // ];
-
-    const data = [
-        {"title" : "HTML Introduction", "link": "/htmlintro"},
-        {"title" : "Installing Editor", "link": "/installingeditor"},
-        {"title" : "HTML Structure", "link": "/installingeditor"},
-        {"title" : "HTML Elements", "link": "/htmlintro"},
-        {"title" : "HTML Heading & Paragaraphs", "link": "/htmlintro"},
-        {"title" : "HTML Text Formatting", "link": "/htmlintro"},
-        {"title" : "HTML Attributes", "link": "/htmlintro"},
-        {"title" : "HTML Img & Anchor tags", "link": "/htmlintro"},
-        {"title" : "HTML List &amp; Tables", "link": "/htmlintro"},
-        {"title" : "HTML Forms", "link": "/htmlintro"},
-        {"title" : "HTML Inline & Block", "link": "/htmlintro"},
-        {"title" : "HTML Ids & Classes", "link": "/htmlintro"},
-        {"title" : "HTML Entities", "link": "/htmlintro"},
-        {"title" : "HTML Semantic Tags", "link": "/htmlintro"},
-        {"title" : "HTML Colors", "link": "/htmlintro"},
-        {"title" : "HTML Layout", "link": "/htmlintro"},
-        {"title" : "HTML Head", "link": "/htmlintro"},
-        {"title" : "HTML Figure & Figcaption", "link": "/htmlintro"},
-        {"title" : "HTML Responsive", "link": "/htmlintro"},
-    ]
+function Htmlintro({props}) {
 
     const pandlist = [
         {"heading": "HTML = Hyper Text Markup Language", "define": "Hyper", "listitems": " = It means a link, which lets you go from one webpage to another."},
@@ -67,12 +40,12 @@ function Htmlintro() {
     return (
         <div className="htmlintro">
             <Header />
-            <Navigationtop text={data} number={1} numbertwo={1}/>
+            <Navigationtop text={props} number={1} numbertwo={1}/>
 
             <div className="cont">
                 <div className="row">
 
-                    <SideNavigationbar text={data} activenumber={1}/>
+                    <SideNavigationbar text={props} activenumber={1}/>
 
                     <div className="maincontent">
                         <Introandbuttons 
@@ -99,7 +72,7 @@ function Htmlintro() {
                             buttontwo={["Installing Editor", "/installingeditor"]}    
                         />
 
-                        <Footer />
+                        <Footer className="footer__bg"/>
                     </div>
 
                 </div>

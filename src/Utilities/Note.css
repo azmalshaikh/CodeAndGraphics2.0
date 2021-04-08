@@ -1,0 +1,9 @@
+.note {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(114, 114, 114, 0.15);
+    border-radius: 0.2rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+    white-space: pre-wrap;
+}

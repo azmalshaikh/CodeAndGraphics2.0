@@ -4,6 +4,7 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    background-color: white;
 }
 
 .row {
@@ -20,6 +21,11 @@
     padding-left: 15px;
 }
 
+/* .maincontent :not(:last-child) {
+    padding-right: 15px;
+    padding-left: 15px;
+} */
+
 @media (min-width: 768px) {
 
     .maincontent {
@@ -28,6 +34,11 @@
         -ms-flex: 0 0 75%;
         flex: 0 0 75%;
         max-width: 75%;
+    }
+
+    .maincontent > .footer__bg {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
     }
 }
 
@@ -58,4 +69,9 @@
 .answer__breif {
     font-size: 1.3rem;
     padding-left: 20px;
+    white-space: pre-wrap;
+}
+
+.footer__bg {
+    background-color: black !important;
 }

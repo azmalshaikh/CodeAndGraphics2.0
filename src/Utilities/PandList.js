@@ -11,6 +11,7 @@ function PandList({text}) {
                     return <li class="pandlist__items"><b>{text.define}</b>{text.listitems}</li>
                 })}
             </p>
+            <br/>
         </div>
     )
 }

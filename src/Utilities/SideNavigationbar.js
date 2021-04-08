@@ -13,7 +13,7 @@ function SideNavigationbar({text, activenumber}) {
 
                     <li className="listitems listitems__heading">
                         <h3 className="listitems__link">
-                            HTML
+                            {text[0].heading}
                         </h3>
                     </li>
 
