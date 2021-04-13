@@ -75,3 +75,7 @@
 .footer__bg {
     background-color: black !important;
 }
+
+.removemargin {
+    margin-top: -20px;
+}

@@ -11,6 +11,7 @@ function Demofile({ demodata }) {
                         <p className="demo__contentremove" title={text.title}>{text.simple}</p>
                         <p className="demo__contentremove large">{text.large}</p>
                         <p className="demo__contentremove medium">{text.medium}</p>
+                        {text.list != null ? <li className="demo__contentremove">{text.list}</li> : <span></span>}
                         <span className="democontentremove">{text.start}</span>
                         <span className="demo__contentremove blue">{text.blue}</span>
                         <span className="democontentremove">{text.rest}</span>
