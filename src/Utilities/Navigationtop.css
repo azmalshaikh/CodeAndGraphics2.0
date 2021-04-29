@@ -1,7 +1,7 @@
 .navigationtopBar {
     height: 100%;
     top:0;
-    background-color: #343a40 !important;
+    background-color: #343a40 !important; 
 }
 
 @media(max-width: 767px) {
@@ -11,6 +11,7 @@
 
     .navtop__itemstwo {
         display: flex;
+        overflow: scroll;
     }
 }
 

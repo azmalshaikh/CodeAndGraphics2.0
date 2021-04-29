@@ -1,88 +1,150 @@
 .footer {
-    background-color: rgb(5, 155, 191);
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 30px 25px;
+    background-color: rgb(5, 155, 215);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("bg-pattern.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
-.footer__image {
-    display: flex !important;
-    /* background-color: #f8f9fa !important; */
-    padding-left: 1rem;
-    padding-top: 1rem; 
-    text-align: center;
+.leftside {
+    flex: 1;  /* It will as much as width is possible*/
+    margin-right: 25px;
 }
 
-.footer__link {
-    margin: auto;
+.leftside img {
+    cursor: pointer;
 }
 
-.footer__logo {
-    height: 70px;
-    width: auto;
-    padding-bottom: 10px;
-    vertical-align: middle;
-    margin-left: auto;
+.leftside p {
+    margin: 15px 0 30px;
+    padding-right: 60px;
 }
 
-.footer__socialMedia {
-    text-align: center !important;
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 1rem;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 23px;
-    padding-top: 20px;
+.socialmedialinks {
+    display: flex;
 }
 
-.footer__socialMediaItems {
-    margin-right: 0.5rem;
-    display: inline-block;
-    text-align: -webkit-match-parent;
+.socialmedialinks li {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.socialMedia__follow {
-    margin-left: 0.25rem !important;
-    margin-right: 0.4rem !important;
-    border: 1px solid rgb(5, 155, 191);
-    border-radius: 6px;
-    background-color: white;
-    color: rgb(5, 155, 191);
-    padding: 7px;
-    vertical-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    display: inline-block;
-    vertical-align: -5px !important;
+.socialmedialinks li:not(:last-child) {
+    margin-right: 15px;
 }
 
-.socialMedia__Links {
-    margin-left: 0.25rem !important;
-    margin-right: 0.25rem !important;
-    color: #007bff;
+.socialmedialinks li:hover {
+    background-color: #111;
+}
+
+.socialmedialinks a {
     text-decoration: none;
-    background-color: transparent;
+    color: rgb(5, 155, 215);
+    font-size: 20px;
 }
 
-.socialMedia__Links :hover {
-    color: #3A3A3A;
-    /* color: rgb(197, 196, 196) ; */
+.socialmedialinks li:hover a {
+    color: #fff;
 }
 
-.socialMediaIcons {
-    font-weight: 400;
-    font-size: 2em;
-    color: white;
+.rightside {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightside__links {
+    list-style: none;
+}
+
+.rightside__links:not(:last-child) {
+    margin-right: 25px;
+}
+
+.rightside__links h4 {
+    color: black;
+    font-size: 20px;
+}
+
+.rightside__links li {
+    margin-top: 20px;
+}
+
+.rightside__links a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.rightside__links li:hover a{
+    color: black;
+}
+
+@media (max-width: 1024px) {
+    .leftside p, .rightside__links a {
+        font-size: 15px;
+    } 
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .leftside {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .leftside p {
+        padding-right: 0px;
+    }
+
+    .socialmedialinks {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .rightside {
+        width: 100%;
+        margin: 50px 0 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightside {
+        flex-direction: column;
+    }
+
+    .rightside__links:not(:last-child) {
+        margin: 0 0 50px 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .socialmedialinks li {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .creator {
-    text-align: center;
-    padding-bottom: 0.25rem;
-    padding-inline-start: 23px;
+    margin-bottom: 10px;
     color: white;
 }
 
@@ -90,20 +152,12 @@
     color: red;
 }
 
-.copyright__info {
-    text-align: center ;
-    padding-bottom: 1rem !important;
-    padding-top: 1rem !important;
-    padding-inline-start: 23px;
-    color: white;
-}
-
 .copyright__infoLink {
     color: white ;
 }
 
-.copyright__info :hover{
+.copyright :hover{
     text-decoration: none;
-    color: #3A3A3A;
+    color: black; 
     /* color: rgb(197, 196, 196) ; */
 }

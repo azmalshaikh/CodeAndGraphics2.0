@@ -4,10 +4,9 @@ import firstweb from "./Images/html5.png";
 import secondweb from "./Images/css3.png";
 import thirdweb from "./Images/js.png";
 import firstcode from "./Images/java1.png";
-import secondcode from "./Images/c++.png";
-import thirdcode from "./Images/python1.jpg";
+import secondcode from "./Images/DSAlgo.jpg";
+import thirdcode from "./Images/react.png";
 import firstdesign from "./Images/Illustrator1.jpg";
-import seconddesign from "./Images/Photoshop.svg";
 import thirddesign from "./Images/PremierePro.png";
 import "./Cards.css";
 import { CardDeck } from 'react-bootstrap';
@@ -15,8 +14,8 @@ import { CardDeck } from 'react-bootstrap';
 function Cards() {
     return (
         <div className="cards">
-            {/* Web Development */}
-            <CardDeck className="cardeck">
+            {/* HTML, CSS and JS */}
+            <CardDeck className="cardeck" id="webdev">
                 <Container 
                     image={firstweb} 
                     heading="HTML" 
@@ -42,7 +41,6 @@ function Cards() {
                 />
             </CardDeck>
 
-            {/* Programming languages */}
             <CardDeck className="cardeck">
                 <Container 
                     image={firstcode} 
@@ -54,37 +52,29 @@ function Cards() {
 
                 <Container 
                     image={secondcode} 
-                    heading="C++" 
-                    text="General purpose programming language based on C. Statically typed, free-form, multiparadigm."
-                    buttonone="Learn C++"
-                    buttonlink={"/cppintro"}
+                    heading="DS and Algo" 
+                    text="Implementation Of DS in Java. Topics Include are Collection Framework and Important Interview Questions."
+                    buttonone="Learn DS and Algo"
+                    buttonlink={"/dsalgo"}
                 />
 
                 <Container 
                     image={thirdcode} 
-                    heading="Python" 
-                    text="Interpreted, high-level, general-purpose programming language. Easy to code as compared to other."
-                    buttonone="Learn Python"
-                    buttonlink={"/pythonintro"}
+                    heading="ReactJS" 
+                    text="JS Library created by Facebook. Used to build powerful Web Apps which runs on Browser."
+                    buttonone="Learn ReactJS"
+                    buttonlink={"/react"}
                 />
             </CardDeck>
 
             {/* Graphics design */}
-            <CardDeck className="cardeck">
+            <CardDeck className="cardeck" id="graphic">
                 <Container 
                     image={firstdesign} 
                     heading="Illustrator" 
                     text="Software application for creating drawings, illustrations, and artwork. Widely used by graphic designer and web designers."
                     buttonone="Learn Illustrator"
                     buttonlink={"/illustratorintro"}
-                />
-
-                <Container 
-                    image={seconddesign} 
-                    heading="Photoshop" 
-                    text="Software that is extensively used for raster image editing, graphic design. Ability to create, enhance, or otherwise edit images, artwork, and illustrations"
-                    buttonone="Learn Photoshop"
-                    buttonlink={"/photoshopintro"}
                 />
 
                 <Container 

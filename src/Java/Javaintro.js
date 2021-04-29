@@ -6,7 +6,7 @@ function Javaintro() {
     return (
         <div className="javaintro">
             <Header />
-            <Navigationtop number={7}/>
+            <Navigationtop number={6}/>
         </div>
     )
 }

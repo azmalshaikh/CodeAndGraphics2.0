@@ -7,7 +7,7 @@ function Premiereprointro() {
     return (
         <div>
             <Header />
-            <Navigationtop number={6}/>
+            <Navigationtop number={5}/>
         </div>
     )
 }

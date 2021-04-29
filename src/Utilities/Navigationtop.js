@@ -15,12 +15,10 @@ function Navigationtop({text , number, numbertwo}) {
         {"link": "/cssintro", "title": "CSS"},
         {"link": "/jsintro", "title": "JavaScript"},
         {"link": "/illustratorintro", "title": "Illustrator"},
-        {"link": "/photoshopintro", "title": "Photoshop"},
         {"link": "/premiereprointro", "title": "Premiere Pro"},
         {"link": "/javaintro", "title": "Java"},
-        {"link": "/cppintro", "title": "C++"},
-        {"link": "/pythonintro", "title": "Python"},
-        {"link": "/androiddevintro", "title": "Android"}
+        {"link": "/react", "title": "React"},
+        {"link": "/dsalgo", "title": "DS Algo"},
     ]
     
     let i = 0, j = 0;

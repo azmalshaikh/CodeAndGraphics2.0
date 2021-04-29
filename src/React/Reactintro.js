@@ -2,13 +2,14 @@ import React from 'react'
 import Header from '../Header'
 import Navigationtop from '../Utilities/Navigationtop'
 
-function Cppintro() {
+
+function Reactintro() {
     return (
         <div>
             <Header />
-            <Navigationtop number={8}/>
+            <Navigationtop number={7}/>
         </div>
     )
 }
 
-export default Cppintro
+export default Reactintro

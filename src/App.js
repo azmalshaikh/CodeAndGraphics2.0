@@ -10,8 +10,8 @@ import Htmlintro from './HTML/Htmlintro';
 import Cssintro from './CSS/Cssintro';
 import Jsintro from './JS/Jsintro';
 import Javaintro from './Java/Javaintro';
-import Cppintro from './CPP/Cppintro';
-import Pythonintro from './Python/Pythonintro';
+import DSalgo from './DSAlgo/Dsalgo';
+import Reactintro from './React/Reactintro';
 import Illustratorintro from './Illustrator/Illustratorintro';
 import Premiereprointro from './PremierePro/Premiereprointro';
 import Androiddevintro from './Android/Androiddevintro';
@@ -180,16 +180,12 @@ function App() {
             <Javaintro />
           </Route>
 
-          <Route path="/cppintro">
-            <Cppintro />
+          <Route path="/dsalgo">
+            <DSalgo />
           </Route>
 
-          <Route path="/pythonintro">
-            <Pythonintro />
-          </Route>
-
-          <Route path="/photoshopintro">
-            <Photoshopintro />
+          <Route path="/react">
+            <Reactintro />
           </Route>
 
           <Route path="/illustratorintro">
@@ -198,10 +194,6 @@ function App() {
 
           <Route path="/premiereprointro">
             <Premiereprointro />
-          </Route>
-
-          <Route path="/androiddevintro">
-            <Androiddevintro />
           </Route>
 
           <Route path="/">
