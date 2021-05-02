@@ -5,25 +5,27 @@ import Introandbuttons from '../Utilities/Introandbuttons'
 import Navigationtop from '../Utilities/Navigationtop'
 import SideNavigationbar from '../Utilities/SideNavigationbar'
 
-function DSalgo({props}) {
+function Csspseudo({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop number={8}/>
+            <Navigationtop number={2}/>
 
             <div className="cont">
                 <div className="row">
 
-                    <SideNavigationbar text={props} activenumber={1}/>
+                    <SideNavigationbar text={props} activenumber={18}/>
 
                     <div className="maincontent">
                         <Introandbuttons 
-                            heading="DS Algo Introduction"
-                            buttontwo={["", "/"]}    
+                            heading="CSS Pseudo Elements"
+                            buttonone={["CSS Responsive", "/cssresponsive"]}
+                            buttontwo={["CSS Animations", "/cssanimation"]}    
                         />
 
                         <Introandbuttons 
-                            buttontwo={["", "/"]}    
+                            buttonone={["CSS Responsive", "/cssresponsive"]}
+                            buttontwo={["CSS Animations", "/cssanimation"]}     
                         />
 
                         <Footer />
@@ -35,4 +37,4 @@ function DSalgo({props}) {
     )
 }
 
-export default DSalgo
+export default Csspseudo

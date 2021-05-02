@@ -5,25 +5,27 @@ import Introandbuttons from '../Utilities/Introandbuttons'
 import Navigationtop from '../Utilities/Navigationtop'
 import SideNavigationbar from '../Utilities/SideNavigationbar'
 
-function DSalgo({props}) {
+function Reacthooks({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop number={8}/>
+            <Navigationtop number={7}/>
 
             <div className="cont">
                 <div className="row">
 
-                    <SideNavigationbar text={props} activenumber={1}/>
+                    <SideNavigationbar text={props} activenumber={8}/>
 
                     <div className="maincontent">
                         <Introandbuttons 
-                            heading="DS Algo Introduction"
-                            buttontwo={["", "/"]}    
+                            heading="React Hooks"
+                            buttonone={["React State", "/reactstate"]}
+                            buttontwo={["React Context API", "/reactcontextapi"]}    
                         />
 
                         <Introandbuttons 
-                            buttontwo={["", "/"]}    
+                            buttonone={["React State", "/reactstate"]}
+                            buttontwo={["React Context API", "/reactcontextapi"]}    
                         />
 
                         <Footer />
@@ -35,4 +37,4 @@ function DSalgo({props}) {
     )
 }
 
-export default DSalgo
+export default Reacthooks

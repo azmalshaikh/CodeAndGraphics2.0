@@ -4,6 +4,7 @@ import Header from '../Header';
 import Introandbuttons from '../Utilities/Introandbuttons';
 import Navigationtop from '../Utilities/Navigationtop';
 import SideNavigationbar from '../Utilities/SideNavigationbar';
+import layout from "../Images/layout.PNG";
 import "./Common.css";
 
 function Htmllayout({props}) {
@@ -23,6 +24,11 @@ function Htmllayout({props}) {
                             buttonone={["HTML Colors", "/htmlcolors"]}
                             buttontwo={["HTML Head", "/htmlhead"]}    
                         />
+
+                        <p className="answer">In website we display contents multiple columns and rows.</p>
+                        <p className="answer">To understand this concept better some layout elemens are introduced.</p>
+
+                        <img src={layout} alt="Layout Image" fluid className="layout__image"/>
 
                         <Introandbuttons 
                             buttonone={["HTML Colors", "/htmlcolors"]}

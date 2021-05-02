@@ -5,25 +5,27 @@ import Introandbuttons from '../Utilities/Introandbuttons'
 import Navigationtop from '../Utilities/Navigationtop'
 import SideNavigationbar from '../Utilities/SideNavigationbar'
 
-function DSalgo({props}) {
+function Csstransitions({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop number={8}/>
+            <Navigationtop number={2}/>
 
             <div className="cont">
                 <div className="row">
 
-                    <SideNavigationbar text={props} activenumber={1}/>
+                    <SideNavigationbar text={props} activenumber={21}/>
 
                     <div className="maincontent">
                         <Introandbuttons 
-                            heading="DS Algo Introduction"
-                            buttontwo={["", "/"]}    
+                            heading="CSS Transition"
+                            buttonone={["CSS Transform", "/csstransform"]}
+                            buttontwo={["CSS Grids", "/cssGrids"]}    
                         />
 
                         <Introandbuttons 
-                            buttontwo={["", "/"]}    
+                            buttonone={["CSS Transform", "/csstransform"]}
+                            buttontwo={["CSS Grids", "/cssGrids"]}    
                         />
 
                         <Footer />
@@ -35,4 +37,4 @@ function DSalgo({props}) {
     )
 }
 
-export default DSalgo
+export default Csstransitions

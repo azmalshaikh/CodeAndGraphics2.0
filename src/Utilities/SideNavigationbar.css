@@ -47,7 +47,7 @@
 .navigationbar {
     max-height: calc(110vh - 9rem);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: none;
     color: rgb(5, 155, 191);
     padding-top: 1rem !important;
