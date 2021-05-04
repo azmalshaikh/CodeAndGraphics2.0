@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 import Introandbuttons from '../Utilities/Introandbuttons';
@@ -9,6 +9,19 @@ import TableContents from '../Utilities/TableContents';
 import "./Common.css";
 
 function Htmlentities({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
 
     const pandlistdata = [
         {"listitems": "Some character are reserved in HTML so they must be replaced with character entities."},
@@ -45,14 +58,14 @@ function Htmlentities({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={13}/>
+            <Navigationtop text={props} number={1} numbertwo={13} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={13}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="HTML Entities"
                             buttonone={["HTML Id's and Classes", "/htmlisandclass"]}

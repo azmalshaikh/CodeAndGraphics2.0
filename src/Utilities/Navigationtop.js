@@ -3,12 +3,14 @@ import "./Navigationtop.css";
 import { Navbar, Nav} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Navigationtop({text , number, numbertwo}) {
+function Navigationtop({text , number, numbertwo, navbar, activenavbar}) {
+
+    const navbaropen = () => {
+        setExpanded(expanded ? false : "expanded");
+        navbar === true ? activenavbar(false) : activenavbar(true)
+    }
 
     const [expanded, setExpanded] = useState(false);
-    // text.map((text) => {
-        console.log(text)
-    // })
 
     const topnavdata = [
         {"link": "/htmlintro", "title": "HTML"},
@@ -26,7 +28,7 @@ function Navigationtop({text , number, numbertwo}) {
     return (
         <Navbar expand="lg" variant="dark" sticky="top" expanded={expanded} className="navigationtopBar">
             <Navbar.Brand href="#home" className="webname"></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}/>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={navbaropen}/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto navtop__items">
                     {topnavdata.map((heading) => {

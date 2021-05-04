@@ -65,8 +65,6 @@ import Reactredux from './React/Reactredux';
 
 function App() {
 
-  // {"title" : "", "link": "/"},
-
   const htmldata = [
     {"heading": "HTML", "title" : "HTML Introduction", "link": "/htmlintro"},
     {"title" : "Installing Editor", "link": "/installingeditor"},

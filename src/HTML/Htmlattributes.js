@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 import Introandbuttons from '../Utilities/Introandbuttons';
@@ -10,6 +10,19 @@ import "./Common.css";
 import Demofile from '../Utilities/Demofile';
 
 function Htmlattributes({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
 
     const pandlistdata = [
         [
@@ -45,14 +58,14 @@ function Htmlattributes({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={7}/>
+            <Navigationtop text={props} number={1} numbertwo={7} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={7}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="HTML Attributes"
                             buttonone={["HTML Text Formatting", "/htmltextformat"]}

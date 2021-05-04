@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 import Demofile from '../Utilities/Demofile';
@@ -9,6 +9,19 @@ import SideNavigationbar from '../Utilities/SideNavigationbar';
 import "./Common.css";
 
 function Htmlstructure({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
 
     const demodata = [
         {"heading": "HTML File :","simple" : "<!DOCTYPE html>"},
@@ -56,14 +69,14 @@ function Htmlstructure({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={3}/>
+            <Navigationtop text={props} number={1} numbertwo={3} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={3}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="HTML Structure"
                             buttonone={["Installing Editor", "/installingeditor"]}

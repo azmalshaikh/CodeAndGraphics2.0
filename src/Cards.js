@@ -4,7 +4,7 @@ import firstweb from "./Images/html5.png";
 import secondweb from "./Images/css3.png";
 import thirdweb from "./Images/js.png";
 import firstcode from "./Images/java1.png";
-import secondcode from "./Images/DSAlgo.jpg";
+import secondcode from "./Images/DSAlgo.PNG";
 import thirdcode from "./Images/react.png";
 import firstdesign from "./Images/Illustrator1.jpg";
 import thirddesign from "./Images/PremierePro.png";
@@ -54,7 +54,7 @@ function Cards() {
                     image={secondcode} 
                     heading="DS and Algo" 
                     text="Implementation Of DS in Java. Topics Include are Collection Framework and Important Interview Questions."
-                    buttonone="Learn DS and Algo"
+                    buttonone="Learn DSAlgo"
                     buttonlink={"/dsalgo"}
                 />
 

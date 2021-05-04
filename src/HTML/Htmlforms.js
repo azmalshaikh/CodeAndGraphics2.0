@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 import Demofile from '../Utilities/Demofile';
@@ -11,6 +11,19 @@ import TableContents from '../Utilities/TableContents';
 import "./Common.css";
 
 function Htmlforms({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
 
     const pandlistdata = [
         [
@@ -87,14 +100,14 @@ function Htmlforms({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={10}/>
+            <Navigationtop text={props} number={1} numbertwo={10} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={10}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="HTML Forms"
                             buttonone={["HTML List and Tables", "/htmllistandtables"]}

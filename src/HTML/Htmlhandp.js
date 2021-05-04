@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
 import Demofile from '../Utilities/Demofile';
@@ -9,6 +9,19 @@ import SideNavigationbar from '../Utilities/SideNavigationbar';
 import "./Common.css";
 
 function Htmlhandp({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
 
     const pandList = [
         // [
@@ -78,14 +91,14 @@ function Htmlhandp({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={5}/>
+            <Navigationtop text={props} number={1} numbertwo={5} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={5}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="HTML Heading and Paragraph"
                             buttonone={["HTML Elements", "/htmlelements"]}

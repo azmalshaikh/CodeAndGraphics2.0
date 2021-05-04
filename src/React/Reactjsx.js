@@ -13,6 +13,7 @@ function Reactjsx({props}) {
         [
             {"listitems": "JavaScript XML."},
             {"listitems": "With JSX you can write HTML code in Javascript file without using any createELement() or any methods."},
+            {"listitems": "Makes it easier to write HTML in React."},
             {"define": "const element = <h1>Code And Graphics</h1>;", "listitems": " ( This syntax is called JSX)"},
             {"listitems": "JSX Produces React Elements."}
         ],

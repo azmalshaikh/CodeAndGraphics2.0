@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../Header';
 import Introandbuttons from '../Utilities/Introandbuttons';
 import Navigationtop from '../Utilities/Navigationtop';
@@ -9,6 +9,19 @@ import "../Utilities/Introandbuttons.css";
 import Footer from '../Footer';
 
 function Installingeditor({props}) {
+
+    const [navbar, setNavbar] = useState(false);
+
+    useEffect(() => {
+        var a = document.getElementById("maincontent");
+        if(navbar === true) {
+            a.style.position = "fixed";
+            a.style.overflow = "hidden";
+        } else {
+            a.style.position = "relative";
+            a.style.overflow = "auto";
+        }
+    }, [navbar]);
     
     const pandlist = [
         {"heading": "VisualStudio Code:", "listitems": "A modern, open source text editor that understands web design."},
@@ -19,14 +32,14 @@ function Installingeditor({props}) {
     return (
         <div>
             <Header />
-            <Navigationtop text={props} number={1} numbertwo={2}/>
+            <Navigationtop text={props} number={1} numbertwo={2} navbar={navbar} activenavbar={setNavbar}/>
 
             <div className="cont">
                 <div className="row">
 
                     <SideNavigationbar text={props} activenumber={2}/>
 
-                    <div className="maincontent">
+                    <div className="maincontent" id="maincontent">
                         <Introandbuttons 
                             heading="Installing Editor"
                             buttonone={["HTML Introduction", "/htmlintro"]}

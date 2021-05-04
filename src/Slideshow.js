@@ -2,7 +2,6 @@ import React from 'react';
 import first from "./Images/PCcopy.jpg";
 import second from "./Images/Laptop3copy.jpg";
 import third from "./Images/Papercopy.jpg";
-import fourth from "./Images/Android1Copy.jpg"
 import { Carousel } from 'react-bootstrap';
 import "./Slideshow.css";
 
@@ -16,8 +15,7 @@ function Slideshow() {
                     <Carousel.Caption>
                         <h2>Programming Language</h2>
                         <p class="erase">1. Java</p>
-                        <p class="erase">2. Python</p>
-                        <p class="erase">3. C++</p>
+                        <p class="erase">2. JavaScript</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -36,15 +34,7 @@ function Slideshow() {
                     <Carousel.Caption className="slideshow__design">
                         <h2>Graphic Designing</h2>
                         <p class="erase">1. Adobe Illustrator</p>
-                        <p class="erase">2. Adobe Photoshop</p>
                         <p class="erase">3. Adobe Premiere Pro</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100 slideshow__images" src={fourth} alt="Third slide" />
-
-                    <Carousel.Caption>
-                        <h2>Android Development</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
